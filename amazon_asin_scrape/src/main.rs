@@ -115,7 +115,7 @@ impl AmazonScraper {
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let mut scraper = AmazonScraper::new("B0DMWFVQDX".to_string());
+    let mut scraper = AmazonScraper::new("B0CRF6NJC3".to_string());
     let title = scraper.get_product_title()?;
     println!("Product Title: {}", title);
     let res = scraper.get_price()?;
