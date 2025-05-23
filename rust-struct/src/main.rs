@@ -1,9 +1,14 @@
 fn main() {
-
-    let vec1 = vec![1,2,3,4,5];
-    let vec2: Vec<_> = vec1.iter().map(|x| x*2).collect();
-    let x = 34;
-    let equal_to_x_closure = |y:u32| y == x;
-    println!("{:?}",vec2);
+    let name = String::from("Dibas K Borborah");
+    let ans = first_word(&name);
+    println!("{:?}", ans);
 }
 
+fn first_word(s: &String) -> &str {
+    for (i, x) in s.chars().enumerate() {
+        if x == ' ' {
+            return &s[0..i];
+        }
+    }
+    &s[..]
+}
