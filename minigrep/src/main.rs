@@ -39,5 +39,6 @@ impl Config {
         };
 
         Ok(Config { query : query.to_string(), filename : filename.to_string() })
+        
     }
 }
